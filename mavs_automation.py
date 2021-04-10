@@ -1,9 +1,20 @@
 import time
+import speech_recognition as sr
+import pyaudio
 from selenium import webdriver
+
 
 #check the status of the mavericks game
 
 ## take input argument (perhaps a speech intake)
+
+r = sr.Recognizer()
+mic = sr.Microphoe()
+
+with mic as source:
+	audio = r.listen(source)
+	
+r.recognize_google(audio)
 
 ## give commands without running script?
 
